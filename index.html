@@ -4,11 +4,10 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SINNERMAN — Streamer Warzone</title>
-  <meta name="description" content="SINNERMAN — Streamer Warzone su Twitch. Audace, ribelle, grintoso. Seguimi su Twitch e Instagram.">
+  <meta name="description" content="SINNERMAN — Streamer Warzone su Twitch. Audace, ribelle, grintoso. Seguimi live.">
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 64 64&#39;%3E%3Crect width=&#39;64&#39; height=&#39;64&#39; fill=&#39;%23000&#39;/%3E%3Ctext x=&#39;50%25&#39; y=&#39;54%25&#39; font-size=&#39;38&#39; text-anchor=&#39;middle&#39; dominant-baseline=&#39;middle&#39; font-family=&#39;Arial Black,sans-serif&#39; font-weight=&#39;900&#39; fill=&#39;%23e60000&#39;%3ES%3C/text%3E%3C/svg%3E">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="SINNERMAN — Streamer Warzone">
   <meta property="og:description" content="Audace, ribelle, grintoso. Seguimi su Twitch: twitch.tv/sinnerman_80">
   <meta property="og:image" content="https://placehold.co/1200x630/0a0a0a/e60000?text=SINNERMAN">
@@ -42,7 +41,7 @@
       overflow-x: hidden;
     }
 
-    /* ── NOISE OVERLAY ── */
+    /* NOISE */
     body::before {
       content: '';
       position: fixed;
@@ -53,7 +52,7 @@
       opacity: .45;
     }
 
-    /* ── NAV ── */
+    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -100,12 +99,10 @@
       padding: .45rem 1.1rem;
       border-radius: 3px;
       font-weight: 700 !important;
-      letter-spacing: .08em;
-      transition: background .2s !important;
     }
     .nav-cta:hover { background: #ff1a1a !important; color: #fff !important; }
 
-    /* ── HERO ── */
+    /* HERO */
     .hero {
       min-height: 100vh;
       display: grid;
@@ -169,7 +166,6 @@
       margin-top: 1.5rem;
       font-size: clamp(1rem, 1.5vw, 1.2rem);
       color: var(--muted);
-      font-weight: 400;
       max-width: 420px;
       line-height: 1.6;
     }
@@ -214,11 +210,11 @@
       text-transform: uppercase;
       padding: .8rem 2rem;
       border-radius: 3px;
-      transition: border-color .2s, transform .2s;
+      transition: border-color .2s, transform .2s, color .2s;
     }
     .btn-ghost:hover { border-color: var(--red); color: var(--red); transform: translateY(-2px); }
 
-    /* ── HERO IMAGE ── */
+    /* HERO IMAGE */
     .hero-image-wrap {
       position: relative;
       z-index: 2;
@@ -245,8 +241,7 @@
       content: '';
       position: absolute;
       bottom: -20px;
-      left: 10%;
-      right: 10%;
+      left: 10%; right: 10%;
       height: 40px;
       background: var(--red);
       filter: blur(30px);
@@ -263,22 +258,7 @@
       filter: contrast(1.05) saturate(1.1);
     }
 
-    .hero-img-tag {
-      position: absolute;
-      bottom: -14px;
-      right: -14px;
-      background: var(--red);
-      color: #fff;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: .75rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      padding: .4rem .8rem;
-      border-radius: 2px;
-    }
-
-    /* ── STATS BAR ── */
+    /* STATS BAR */
     .stats-bar {
       background: var(--bg2);
       border-top: 1px solid rgba(230,0,0,.2);
@@ -290,9 +270,7 @@
       gap: 1.5rem;
     }
 
-    .stat {
-      text-align: center;
-    }
+    .stat { text-align: center; }
     .stat-value {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
@@ -308,10 +286,8 @@
       margin-top: .3rem;
     }
 
-    /* ── SECTIONS ── */
-    section {
-      padding: 6rem clamp(1.5rem, 6vw, 6rem);
-    }
+    /* SECTIONS */
+    section { padding: 6rem clamp(1.5rem, 6vw, 6rem); }
 
     .section-tag {
       font-size: .7rem;
@@ -332,7 +308,7 @@
       color: #fff;
     }
 
-    /* ── CHI SONO ── */
+    /* CHI SONO */
     #chi-sono {
       background: var(--bg2);
       display: grid;
@@ -341,9 +317,7 @@
       align-items: center;
     }
 
-    .about-img-wrap {
-      position: relative;
-    }
+    .about-img-wrap { position: relative; }
 
     .about-img-frame {
       position: relative;
@@ -405,7 +379,7 @@
       border-radius: 2px;
     }
 
-    /* ── WARZONE ── */
+    /* WARZONE */
     #warzone {
       background: var(--bg);
       position: relative;
@@ -415,8 +389,7 @@
     #warzone::before {
       content: 'WARZONE';
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 50%; left: 50%;
       transform: translate(-50%, -50%);
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
@@ -464,11 +437,7 @@
     .card:hover { border-color: rgba(230,0,0,.3); transform: translateY(-4px); }
     .card:hover::before { transform: scaleX(1); }
 
-    .card-icon {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
+    .card-icon { font-size: 2.2rem; margin-bottom: 1rem; display: block; }
     .card h3 {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
@@ -477,13 +446,9 @@
       margin-bottom: .6rem;
       color: #fff;
     }
-    .card p {
-      color: var(--muted);
-      font-size: .9rem;
-      line-height: 1.6;
-    }
+    .card p { color: var(--muted); font-size: .9rem; line-height: 1.6; }
 
-    /* ── TWITCH SECTION ── */
+    /* STREAM */
     #stream {
       background: var(--bg2);
       text-align: center;
@@ -517,11 +482,7 @@
       background: radial-gradient(ellipse at center, rgba(230,0,0,.06) 0%, transparent 70%);
     }
 
-    .twitch-logo {
-      font-size: 3.5rem;
-      display: block;
-      margin-bottom: 1rem;
-    }
+    .twitch-logo { font-size: 3.5rem; display: block; margin-bottom: 1rem; }
 
     .stream-box h3 {
       font-family: 'Barlow Condensed', sans-serif;
@@ -539,46 +500,7 @@
       font-style: italic;
     }
 
-    /* ── GALLERY ── */
-    #gallery {
-      background: var(--bg);
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-top: 2.5rem;
-    }
-
-    .gallery-item {
-      border-radius: 4px;
-      overflow: hidden;
-      position: relative;
-      aspect-ratio: 16/9;
-    }
-    .gallery-item.tall { grid-row: span 2; aspect-ratio: auto; }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: saturate(.9) contrast(1.05);
-      transition: transform .4s, filter .4s;
-    }
-    .gallery-item:hover img {
-      transform: scale(1.04);
-      filter: saturate(1.1) contrast(1.1);
-    }
-
-    .gallery-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,.7) 0%, transparent 50%);
-    }
-
-    /* ── FOLLOW CTA ── */
+    /* FOLLOW CTA */
     #follow {
       background: var(--bg);
       text-align: center;
@@ -653,7 +575,7 @@
     }
     .btn-discord:hover { background: #4752c4; transform: translateY(-2px); }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer {
       background: var(--bg2);
       border-top: 1px solid rgba(255,255,255,.05);
@@ -674,15 +596,9 @@
     }
     .footer-logo span { color: var(--red); }
 
-    footer p {
-      color: var(--muted);
-      font-size: .8rem;
-    }
+    footer p { color: var(--muted); font-size: .8rem; }
 
-    .footer-socials {
-      display: flex;
-      gap: 1rem;
-    }
+    .footer-socials { display: flex; gap: 1rem; }
     .footer-socials a {
       color: var(--muted);
       text-decoration: none;
@@ -694,7 +610,7 @@
     }
     .footer-socials a:hover { color: var(--red); }
 
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: 1fr;
@@ -715,8 +631,6 @@
     @media (max-width: 600px) {
       nav { padding: 0 1.2rem; }
       .nav-links { display: none; }
-      .gallery-grid { grid-template-columns: 1fr; }
-      .gallery-item.tall { grid-row: span 1; }
       .stats-bar { gap: 1rem; }
     }
   </style>
@@ -753,7 +667,7 @@
     </div>
     <div class="hero-image-wrap">
       <div class="hero-img-frame">
-        <img src="./SINNERMAN — Streamer Warzone 2_files/core-turn-6109164bfd848ae41e22099f15dfcf3318ee502041f91682dcb64d1d4b404446-0-7d2b23e90e847d39ed794b8424ceb927012c5d95f0384e0499462c213e7ba504.jpg" alt="Sinnerman — Streamer Warzone">
+        <img src="./index_files/core-turn-6109164bfd848ae41e22099f15dfcf3318ee502041f91682dcb64d1d4b404446-0-7d2b23e90e847d39ed794b8424ceb927012c5d95f0384e0499462c213e7ba504.jpg" alt="Sinnerman — Streamer Warzone">
       </div>
     </div>
   </section>
@@ -782,7 +696,7 @@
   <section id="chi-sono" aria-label="Chi sono">
     <div class="about-img-wrap">
       <div class="about-img-frame">
-        <img src="./SINNERMAN — Streamer Warzone 2_files/core-turn-6109164bfd848ae41e22099f15dfcf3318ee502041f91682dcb64d1d4b404446-0-7d2b23e90e847d39ed794b8424ceb927012c5d95f0384e0499462c213e7ba504.jpg" alt="Sinnerman — streamer Warzone">
+        <img src="./index_files/core-turn-6109164bfd848ae41e22099f15dfcf3318ee502041f91682dcb64d1d4b404446-0-7d2b23e90e847d39ed794b8424ceb927012c5d95f0384e0499462c213e7ba504.jpg" alt="Sinnerman — streamer Warzone">
         <div class="about-img-overlay"></div>
       </div>
     </div>
